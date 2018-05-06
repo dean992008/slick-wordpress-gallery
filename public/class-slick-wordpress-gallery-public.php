@@ -189,7 +189,7 @@ class Slick_Wordpress_Gallery_Public
 			if ( ! empty( $atts['link'] ) && 'file' === $atts['link'] ) {
 				$img_html = wp_get_attachment_link( $item, $atts['size'], false, false, false, array('class' => 'img-responsive') );
 			} elseif ( ! empty( $atts['link'] ) && 'none' === $atts['link'] ) {
-				$img_html = wp_get_attachment_image($item, $size, false, array('class' => 'img-responsive'));
+				$img_html = wp_get_attachment_image($item, $atts['size'], false, array('class' => 'img-responsive'));
 			} else {
 				$img_html = wp_get_attachment_link( $item, $atts['size'], true, false, false, array('class' => 'img-responsive') );
 			}
